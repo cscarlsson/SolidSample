@@ -19,7 +19,7 @@ namespace ArdalisRating
                 return new UnknownPolicyRater(engine, engine.Logger);
             }
 
-            //switch(policy.Type)
+            //switch (policy.Type)
             //{
             //    case PolicyType.Auto:
             //        return new AutoPolicyRater(engine, engine.Logger);
@@ -33,9 +33,7 @@ namespace ArdalisRating
             //    case PolicyType.Flood:
             //        return new FloodPolicyRater(engine, engine.Logger);
             //    default:
-            //        //ToDo: Implement null object pattern
-            //        //Logger.Log("Unknown policy type");
-            //        return null;
+            //        return new UnknownPolicyRater(engine, engine.Logger);
             //}
         }
     }
