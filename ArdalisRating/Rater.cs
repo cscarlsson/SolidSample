@@ -6,12 +6,11 @@ namespace ArdalisRating
 {
     public abstract class Rater
     {
-        internal RatingEngine _engine { get; }
-        internal ConsoleLogger _logger { get; }
-        public Rater(RatingEngine engine, ConsoleLogger logger) 
+        protected readonly IRatingUpdater _ratingUpdater;
+        public ILogger Logger { get; set; } = new ConsoleLogger();
+        public Rater(IRatingUpdater ratingUpdater) 
         {
-            _engine = engine;
-            _logger = logger;
+            _ratingUpdater = ratingUpdater;
         }
         public abstract void Rate(Policy policy);
     }

@@ -4,7 +4,11 @@ using System.Text;
 
 namespace ArdalisRating
 {
-    public class ConsoleLogger
+    public interface ILogger
+    {
+        void Log(string Message);
+    }
+    public class ConsoleLogger : ILogger
     {
         public void Log(string Message)
         {
